@@ -222,7 +222,7 @@ struct Light {
   {
     // TODO: compute the MVP matrix from the light's point of view
     //compute the projection matrix from light pov
-    glm::mat4 projectionMatrix = glm::ortho(-scene_radius,scene_radius,-scene_radius,-scene_radius,0.001f,2*scene_radius);
+    glm::mat4 projectionMatrix = glm::ortho(-scene_radius,scene_radius,-scene_radius,scene_radius,0.001f,2*scene_radius);
     glm::mat4 viewMatrix = glm::lookAt(position,scene_center,glm::vec3(0,1,0));
     depthMVP = projectionMatrix*viewMatrix;
 
